@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Signup Page </title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <form method="get" action="/my_projects/myproject.html">
+        <h1>SignUp</h1>
+        <input type="text" id="username" placeholder="Username" required >
+        <input type="text" name="Gender" list="Gender" placeholder="Gender" required>
+        <datalist id="Gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </datalist>
+        <input type="email" name="email" id="email"  placeholder="Email" required>
+        <input type="password" id="password" placeholder="password" required>
+        <button type="submit" id="btn" value="Login" onclick="Loginpage()">Login</button>
+    </form>
+   
+    <script src="/sign_up_page/signup.js"></script>
+</body>
+</html>

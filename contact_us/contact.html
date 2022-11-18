@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML, CSS, JavaScrip">
+    <meta name="author" content="Aditya Yadav">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact US</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="contact">
+        <div class="header">
+            <h1 class="title">Contact us</h1>
+            <p class="sub heading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et corrupti, sunt corporis numquam veniam reprehenderit tenetur sequi omnis unde quam eligendi, itaque id, quas doloribus necessitatibus eaque aspernatur dignissimos dicta.</p>
+        </div>   
+        <div class="maincontain">
+            <div class="sidecontain">
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="location-outline"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <h2>Address</h2>
+                        <p class="contains">1240,Kidwai Nagar Allapur,Prayagraj,211006</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="call-outline"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <h2>Phone</h2>
+                        <p class="contains">7267001135</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon">
+                        <ion-icon name="mail-outline"></ion-icon>
+                    </div>
+                    <div class="text">
+                        <h2>Email</h2>
+                        <p class="contains">yak7003876gmail.com</p>
+                    </div>
+                </div>
+                <h2 class="txt"> Contact with us</h2>
+                <ul class="links">
+                    <li><a href="https://www.facebook.com/adityak.yadav.3344/"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                    <li><a href="https://www.linkedin.com/in/aditya-yadav-27b72b233/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://twitter.com/home"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                    <li><a href="https://www.instagram.com/aky007aditya/?next=%2F"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                </ul>
+            </div>
+            <div class="othercontain" id="bts">
+                <form>
+                    <h1 class="send message">send message</h1>
+                    <input type="text" id="name" placeholder="Full Name" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" name="message" id="message" placeholder="Type your message.." required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="colors">
+            <span class="active" onclick="changeColor('#1dd1a1')" style="--clr:#1dd1a1;"></span>
+            <span class="active" onclick="changeColor('#ff6b6b')" style="--clr:#ff6b6b;"></span>
+            <span class="active" onclick="changeColor('#00bcd4')" style="--clr:#00bcd4;"></span>
+            <span class="active" onclick="changeColor('#99f368')" style="--clr:#99f368;"></span>
+            <span class="active" onclick="changeColor('#ff9f43')" style="--clr:#ff9f43;"></span>
+        </div>
+    </div>
+
+    <script>
+        let bts = document.getElementById('bts');
+        function changeColor(color){
+            //document.maincontain .sidecontain .h2.style.background=color;
+            bts.style.background = color;
+
+        // mark as active selected color
+            document.querySelectorAll('span').forEach(function(item){
+                item.classList.remove('active');
+            })
+            event.target.classList.add('active');
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

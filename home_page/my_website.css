@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  left: 0;
+  border-radius: 50%;
+  padding: 21px 0;
+  margin: 36px 0;
+  height: 31vh;
+  width: 7vw;
+
+}
+header .toggle{
+  position: relative;
+  width: 30px;
+  height: 29px;
+  background: url(menu.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: 26px;
+  background-color: #cf2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .toggle.active{
+  background: url(close.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d13;
+  cursor: pointer;
+  background-size: 34px;
+}
+header .toggle:before{
+  content: 'menu';
+  position: absolute;
+  right:45px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 21px;
+  padding: 2px 5px;
+  background: #fff;
+  color: #111;
+}
+header .toggle.active:before{
+  content: 'close';
+}
+section video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.glass{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.1);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+.active .glass{
+  width: 100%;
+  backdrop-filter: blur(20px);
+  box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+  transition-delay: 0s;
+}
+.content{
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+.active .content{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-200px);
+  transition-delay: 0.2s;
+}
+.content h1{
+  position: relative;
+  color: #fff;
+  font-size: 8vw;
+  line-height: 0.55em;
+  text-shadow: 05px 5px rgba(0,0,0,0.2);
+  font-family: 'Dancing script',cursive;
+}
+.content h1 span{
+  font-size: 0.2em;
+  font-weight: 300;
+  letter-spacing: 5px;
+  background: #fff;
+  color: #111;
+  padding: 0 10px;
+  text-shadow: 0 5px 5px rgba(0,0,0,0);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+.sci{
+  position: absolute;
+  height: 2.3vh;
+  bottom: 40px;
+  right: 100px;
+  display: flex;
+  z-index: 100;
+}
+.sci li{
+  list-style: none;
+  margin: 10px;
+  padding: 1.4px;
+  background: #fff;
+  transition: 0.5s;
+  transition-delay: calc(0.25s *var(--i));
+}
+.active .sci li{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+}
+.sci li a{
+  color: #4e1199;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+.navigation{
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50% -50%);
+  z-index: 100;
+}
+.navigation li{
+  list-style: none;
+  text-align: center;
+  margin: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  transform: translateX(100px);
+  transition-delay: calc(0.1s * var(--i));
+}
+.active .navigation li{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0px);
+}
+.navigation li a{
+  color: #111;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 4px 10px;
+  display: inline-block;
+}
+.navigation li a:hover{
+  background: #111;
+  color: #fff;
+  letter-spacing: 10px;
+  text-transform: lowercase;
+  border-radius: 50%;
+}
+@media(max-width: 991px){
+  header{
+  padding: 20px;
+  }
+  header img{
+    height: 13vh;
+    width: 14vw;
+  }
+
+  header .toggle {
+    width: 30px;
+    height: 4vh;
+    background-color: aquamarine;
+    background-size: 20px;
+  }
+
+  header .toggle:before{
+    contain: none;
+    display: none;
+  }
+  .sci{
+    bottom: 22px;
+    right: 0px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .sci li{
+    margin: 0;
+    padding: 0;
+    background: none;
+
+  }
+  .sci li a{
+    color: springgreen;
+    background-color: #111;
+    font-size: 14px;
+    padding: 0px;
+    margin: 7px;
+    letter-spacing: 3px;
+  }
+  .glass{
+    width: 33%;
+  }
+  .content h1{
+    font-size: 15vw;
+  }
+  .content h1 span{
+    font-size: 0.3em;
+    letter-spacing: 2px;
+    padding: 0 5px;
+  }
+
+  .navigation{
+    left: 20%;
+    font-size: 15px;
+  }
+}

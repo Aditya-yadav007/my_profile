@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify page</title>
+    <link rel="stylesheet" href="spotify.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.png" alt="Spotify">Spotify</li>
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="songlist">
+            <h1>Best of NCS - Non Copyright Song</h1>
+            <div class="songitemcontainer">
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Let me down</span>
+                    <span class="songlistplay"><span class="timestamp">02:57 <i id="0" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Such a Whore</span>
+                    <span class="songlistplay"><span class="timestamp">02:28 <i id="1" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Drive Forever Russian</span>
+                    <span class="songlistplay"><span class="timestamp">02:32 <i id="2" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Deva shree ganesha</span>
+                    <span class="songlistplay"><span class="timestamp">03:54 <i id="3" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Alan walker sabrina carpenter</span>
+                    <span class="songlistplay"><span class="timestamp">03:37 <i id="4" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="music-logo.jpg" alt="1">
+                    <span class="songName">Martin Garrix</span>
+                    <span class="songlistplay"><span class="timestamp">03:12<i id="5" class="fa-solid songItemPlay fa-circle-play"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <!-- <siv class="songBanner"></siv> -->
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <!-- Fontawesome icon -->
+            <i class=" fa-2x fa-solid fa-backward" id="previous"></i>
+            <i class=" fa-2x fa-solid fa-circle-play" id="masterPlay"></i>
+            <i class=" fa-2x fa-solid fa-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="sound-wave.gif" alt="page not found" id="gif"><span id="masterSongName"></span> 
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/b6c2b90fc8.js" crossorigin="anonymous"></script>
+    <script src="spotify.js"></script>
+</body>
+</html>
